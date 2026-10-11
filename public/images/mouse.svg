@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mouseBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="mouseBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="wheelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="mouseShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="16" fill="url(#mouseBgGrad)"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="200" cy="245" rx="80" ry="14" fill="#000" opacity="0.12"/>
+
+  <!-- Mouse Outer Body -->
+  <g filter="url(#mouseShadow)">
+    <path d="M 140 120 C 140 65, 170 50, 200 50 C 230 50, 260 65, 260 120 L 260 180 C 260 225, 235 240, 200 240 C 165 240, 140 225, 140 180 Z" fill="url(#mouseBodyGrad)"/>
+    
+    <!-- Ergonomic Side Accents -->
+    <path d="M 141 115 C 146 160, 152 195, 160 215" fill="none" stroke="#475569" stroke-width="2.5" opacity="0.6"/>
+    <path d="M 259 115 C 254 160, 248 195, 240 215" fill="none" stroke="#475569" stroke-width="2.5" opacity="0.6"/>
+
+    <!-- Left / Right Click Split Line -->
+    <line x1="200" y1="50" x2="200" y2="100" stroke="#1e293b" stroke-width="3"/>
+    
+    <!-- Scroll Wheel Slot -->
+    <rect x="193" y="70" width="14" height="34" rx="7" fill="#0f172a"/>
+    <!-- Scroll Wheel -->
+    <rect x="195" y="73" width="10" height="28" rx="5" fill="url(#wheelGrad)"/>
+    <line x1="195" y1="82" x2="205" y2="82" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+    <line x1="195" y1="87" x2="205" y2="87" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+    <line x1="195" y1="92" x2="205" y2="92" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Subtle LED light / Logo badge -->
+    <circle cx="200" cy="180" r="10" fill="#0284c7" opacity="0.85"/>
+    <path d="M 197 176 L 203 180 L 197 184" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
